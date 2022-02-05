@@ -84,7 +84,7 @@ interface HumanWithRole extends Human {
     role: string;
 }
 
-interface HistoryData {
+interface History {
     history: HistoryEntry[];
     showHistory(): void;
 }
@@ -94,7 +94,7 @@ interface HistoryEntry {
     event: string;
 }
 
-class User implements Human, HistoryData {
+class User implements Human, History {
     age: number;
     name: string;
     surname: string;
@@ -125,7 +125,7 @@ person.addHistory({
 })
 person.showHistory();
 //
-// class Person implements Human, HistoryData {
+// class Person implements Human, History {
 //     age: number;
 //     history: string[];
 //     name: string;
